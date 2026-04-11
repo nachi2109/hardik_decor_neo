@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hardic Decor</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{--gold:#d4af37;--bg:#0b0b0b;--card:#141414}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Poppins;background:var(--bg);color:#fff}
+.container{max-width:1200px;margin:auto;padding:20px}
+
+/* NAV */
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 30px;background:#000;border-bottom:1px solid #222}
+nav h2{font-family:Playfair Display;color:var(--gold)}
+nav a{color:#ccc;text-decoration:none;margin-left:25px;font-size:14px}
+
+/* HERO */
+.hero{
+height:85vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.75)), url('hero-bg.JPG');
+background-size:cover;
+background-position:center;
+padding:20px
+}
+.hero h1{
+font-size:52px;
+font-family:Playfair Display;
+letter-spacing:1px
+}
+.hero p{
+color:var(--gold);
+margin:12px 0;
+font-size:18px;
+letter-spacing:1px
+}
+.hero span{
+color:#ddd;
+font-size:15px;
+background:rgba(0,0,0,0.4);
+padding:6px 14px;
+border-radius:20px
+}
+
+/* SERVICES */
+.services-section{padding:80px 20px}
+.services-title{text-align:center;font-family:Playfair Display;color:var(--gold);margin-bottom:50px}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}
+.service-card{
+background:var(--card);
+padding:30px;
+border-radius:12px;
+border:1px solid #222;
+transition:0.3s
+}
+.service-card:hover{
+transform:translateY(-5px);
+border-color:var(--gold)
+}
+.service-card h4{margin-bottom:10px}
+.service-card p{color:#aaa;font-size:14px}
+
+/* GALLERY */
+.gallery-section{padding:60px 20px}
+.gallery-title{text-align:center;color:var(--gold);font-family:Playfair Display;margin-bottom:30px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.gallery img{width:100%;border-radius:10px;cursor:pointer;transition:0.3s}
+.gallery img:hover{transform:scale(1.03)}
+
+/* LIGHTBOX */
+.lightbox{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.9);justify-content:center;align-items:center}
+.lightbox img{max-width:90%;max-height:90%}
+
+/* CONTACT */
+.contact-section{text-align:center;padding:60px}
+.contact-section h3{color:var(--gold);margin-bottom:20px}
+.contact-buttons a{
+display:inline-block;
+margin:10px;
+padding:12px 25px;
+border-radius:30px;
+background:var(--gold);
+color:#000;
+text-decoration:none;
+font-weight:500
+}
+
+footer{text-align:center;padding:20px;color:#777;border-top:1px solid #222}
+
+@media(max-width:600px){
+.hero h1{font-size:32px}
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<h2>Hardic Decor</h2>
+<div>
+<a href="#services">Services</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<div class="hero">
+<h1>Hardic Decor</h1>
+<p>Interior Furnishing & Decor Solutions</p>
+<span>9011979790 | Govind.pitti@gmail.com</span>
+</div>
+
+<div class="container services-section" id="services">
+<h2 class="services-title">Our Services</h2>
+<div class="services-grid">
+<div class="service-card">
+<h4>Curtains</h4>
+<p>Premium curtain solutions tailored for modern and elegant interiors.</p>
+</div>
+<div class="service-card">
+<h4>Cushions</h4>
+<p>Stylish cushion designs to enhance comfort and aesthetic appeal.</p>
+</div>
+<div class="service-card">
+<h4>Upholstery</h4>
+<p>Custom upholstery services for sofas, chairs and interior furniture.</p>
+</div>
+<div class="service-card">
+<h4>Home Decor</h4>
+<p>Handpicked decor items to give your space a luxurious touch.</p>
+</div>
+</div>
+</div>
+
+<div class="container gallery-section" id="gallery">
+<h2 class="gallery-title">Gallery</h2>
+<div class="gallery">
+<img src="gallery-1.JPEG">
+<img src="gallery-2.JPEG">
+<img src="gallery-3.JPEG">
+<img src="gallery-4.JPEG">
+<img src="gallery-5.JPEG">
+<img src="gallery-6.JPEG">
+<img src="gallery-7.JPEG">
+<img src="gallery-8.JPEG">
+<img src="gallery-9.JPEG">
+<img src="gallery-10.JPEG">
+<img src="gallery-11.JPEG">
+<img src="gallery-12.JPEG">
+<img src="gallery-13.JPEG">
+<img src="gallery-14.JPEG">
+<img src="gallery-15.JPG">
+<img src="gallery-16.JPEG">
+</div>
+</div>
+
+<div class="lightbox" id="lightbox" onclick="this.style.display='none'">
+<img id="lightbox-img">
+</div>
+
+<div class="contact-section" id="contact">
+<h3>Contact Us</h3>
+<div class="contact-buttons">
+<a href="tel:9011979790">Call</a>
+<a href="mailto:Govind.pitti@gmail.com">Email</a>
+<a href="https://wa.me/919011979790">WhatsApp</a>
+</div>
+</div>
+
+<footer>
+Quality Craftsmanship | Elegant Designs | Custom Orders Available
+</footer>
+
+<script>
+document.querySelectorAll('.gallery img').forEach(img=>{
+ img.onclick=()=>{
+  document.getElementById('lightbox').style.display='flex';
+  document.getElementById('lightbox-img').src=img.src;
+ }
+});
+</script>
+
+</body>
+</html>
